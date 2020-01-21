@@ -1,5 +1,5 @@
-from persistence import Persistence
-from telemetry import Telemetry
+from frame.persistence import Persistence
+from frame.telemetry import Telemetry
 
 
 class Controller:

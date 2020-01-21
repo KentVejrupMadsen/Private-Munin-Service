@@ -1,4 +1,4 @@
-from archive import Archive
+from frame.persistent.archive import Archive
 
 
 class Persistence:
