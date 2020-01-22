@@ -1,11 +1,5 @@
 #!/bin/bash
 
-echo '[program version]'
-vcgencmd version
-
-echo -n '[temperature] '
-vcgencmd measure_temp
-
 echo '[memory] '
 echo -n ' [arm] '
 vcgencmd get_mem arm
