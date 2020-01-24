@@ -2,10 +2,15 @@ from frame.persistence import Persistence
 
 from frame.business.telemetry import Telemetry
 
+# Business Layer
+
 
 class Controller:
     def __init__(self):
+        # Layer in the system
         self.persistence = Persistence()
+
+        #
         self.telemetry = Telemetry()
 
         pass
