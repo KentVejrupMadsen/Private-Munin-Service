@@ -21,3 +21,6 @@ free -t
 
 # Disks stats
 cat /proc/diskstats
+
+cat /proc/version
+ cat /proc/partitions
