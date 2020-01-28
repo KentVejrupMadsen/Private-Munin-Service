@@ -1,4 +1,4 @@
-from frame.application import Application
+from model.application import Application
 
 
 def main():

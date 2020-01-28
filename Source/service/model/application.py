@@ -1,4 +1,4 @@
-from frame.controller import Controller
+from model.controller import Controller
 
 
 class Application:

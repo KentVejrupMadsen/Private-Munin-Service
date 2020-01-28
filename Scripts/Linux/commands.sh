@@ -5,6 +5,11 @@ uptime
 echo "{ end }"
 echo ""
 
+echo "{ free }"
+free -t
+echo "{ end }"
+echo ""
+
 echo "{ vmstat }"
 vmstat
 echo "{ end }"

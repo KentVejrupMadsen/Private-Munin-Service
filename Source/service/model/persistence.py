@@ -1,4 +1,4 @@
-from frame.persistent.archive import Archive
+from model.persistent.archive import Archive
 
 # Persistent Domain
 

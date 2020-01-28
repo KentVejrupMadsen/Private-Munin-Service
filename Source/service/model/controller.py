@@ -1,6 +1,6 @@
-from frame.persistence import Persistence
+from model.persistence import Persistence
 
-from frame.business.telemetry import Telemetry
+from model.business.telemetry import Telemetry
 
 # Business Layer
 

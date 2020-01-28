@@ -1,4 +1,4 @@
-from frame.persistent.configuration import Configuration
+from model.persistent.configuration import Configuration
 
 
 class Archive:
