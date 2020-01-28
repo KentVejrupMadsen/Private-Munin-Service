@@ -1,31 +1,35 @@
-vmstat
+uptime
+date
 
-lsof
+
+vmstat
+mpstat
+
 netstat
-ps
 pstree
 strace
 
+ps
 ss
 df
 
-mpstat
 pmap
 
 
-date
 ipcs
-
-uptime
 
 history
 
-lscpu
-
 nproc
 
+
+lsof
+
+lscpu
 lsblk
 lsusb
+
+free -t
 
 dmesg
 
