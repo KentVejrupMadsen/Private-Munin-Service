@@ -9,9 +9,9 @@ class Application:
         pass
 
     def execute(self):
+
         self.controller.initialise()
         self.controller.execute()
         self.controller.garbage()
-
         pass
 

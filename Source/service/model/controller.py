@@ -13,6 +13,8 @@ class Controller:
         #
         self.telemetry = Telemetry()
 
+        self.state = True
+
         pass
 
     def initialise(self):
@@ -20,6 +22,9 @@ class Controller:
         pass
 
     def execute(self):
+        while self.state:
+            self.telemetry.execution()
+            pass
 
         pass
 
