@@ -20,17 +20,17 @@ def main():
             print('log found')
             out = open('text.log', "a")
 
-            out.write('processor, ' + str(processor_temperature) + ', ' + str(datetime.date.today()))
-            out.write('graphic processor, ' + str(graphic_temperature) + ', ' + str(datetime.date.today()))
+            out.write('processor, ' + str(processor_temperature) + ', ' + str(datetime.date.today()) + '\r\n')
+            out.write('graphic processor, ' + str(graphic_temperature) + ', ' + str(datetime.date.today()) + '\r\n')
 
             out.close()
         else:
             print('log does not exist')
             out = open('text.log', "w+")
-            out.write('type, value, registered')
+            out.write('type, value, registered \r\n')
 
-            out.write('processor, ' + str(processor_temperature) + ', ' + str(datetime.date.today()))
-            out.write('graphic processor, ' + str(graphic_temperature) + ', ' + str(datetime.date.today()))
+            out.write('processor, ' + str(processor_temperature) + ', ' + str(datetime.date.today()) + '\r\n')
+            out.write('graphic processor, ' + str(graphic_temperature) + ', ' + str(datetime.date.today()) + '\r\n')
 
             out.close()
 
