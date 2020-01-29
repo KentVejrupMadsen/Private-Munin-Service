@@ -1,6 +1,7 @@
 import time
 
 from Source.service.model.business.metric import Metric
+from Source.service.model.business.system_process import SystemProcess
 
 
 class Telemetry:
@@ -12,6 +13,7 @@ class Telemetry:
         pass
 
     def execution(self):
+
 
 
         time.sleep(self.wait_duration)
