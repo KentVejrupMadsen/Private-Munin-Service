@@ -20,8 +20,8 @@ def main():
             print('log found')
             out = open('text.log', "a")
 
-            out.write('processor, ' + str(processor_temperature).rstrip("\r\n") + ', ' + str(datetime.datetime.now()) + ' \r\n')
-            out.write('graphic processor, ' + str(graphic_temperature).rstrip("\r\n") + ', ' + str(datetime.datetime.now())+ ' \r\n')
+            out.write('processor, ' + str(processor_temperature).strip("\n").strip("\r") + ', ' + str(datetime.datetime.now()) + ' \r\n')
+            out.write('graphic processor, ' + str(graphic_temperature).strip("\r").strip("\n") + ', ' + str(datetime.datetime.now())+ ' \r\n')
 
             out.close()
         else:
@@ -29,8 +29,8 @@ def main():
             out = open('text.log', "w+")
             out.write('type, value, registered \r\n')
 
-            out.write('processor, ' + str(processor_temperature).rstrip("\r\n") + ', ' + str(datetime.datetime.now()) + ' \r\n')
-            out.write('graphic processor, ' + str(graphic_temperature).rstrip("\r\n") + ', ' + str(datetime.datetime.now()) + ' \r\n')
+            out.write('processor, ' + str(processor_temperature).strip("\r").strip("\n") + ', ' + str(datetime.datetime.now()) + ' \r\n')
+            out.write('graphic processor, ' + str(graphic_temperature).strip("\r").strip("\n") + ', ' + str(datetime.datetime.now()) + ' \r\n')
 
             out.close()
 
