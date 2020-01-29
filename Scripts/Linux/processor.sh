@@ -17,10 +17,8 @@ cat /proc/loadavg
 # Memory
 cat /proc/meminfo
 
-free -t
-
 # Disks stats
 cat /proc/diskstats
 
 cat /proc/version
- cat /proc/partitions
+cat /proc/partitions
