@@ -1,19 +1,42 @@
 import subprocess
 import time
+import datetime
+import os
+import pathlib
 
 
 def main():
 
     while True:
         result = subprocess.run(['sh', './hooks/processor_temperature.sh'], stdout=subprocess.PIPE)
-        print('cpu : ' + result.stdout.decode('utf-8'))
+        processor_temperature = result.stdout.decode('utf-8')
 
         result = subprocess.run(['sh', './hooks/graphic_temperature.sh'], stdout=subprocess.PIPE)
-        print('graphics : ' + result.stdout.decode('utf-8'))
+        graphic_temperature = result.stdout.decode('utf-8')
+
+        out = None
+
+        if pathlib.Path('text.log').is_file():
+            print('log found')
+            out = open('text.log', "a")
+
+            out.write('processor, ' + str(processor_temperature) + ', ' + str(datetime.date.today()))
+            out.write('graphic processor, ' + str(graphic_temperature) + ', ' + str(datetime.date.today()))
+
+            out.close()
+        else:
+            print('log does not exist')
+            out = open('text.log', "w+")
+            out.write('type, value, registered')
+
+            out.write('processor, ' + str(processor_temperature) + ', ' + str(datetime.date.today()))
+            out.write('graphic processor, ' + str(graphic_temperature) + ', ' + str(datetime.date.today()))
+
+            out.close()
 
 
 
-        time.sleep(.500)
+        time.sleep(1)
 
     pass
 
